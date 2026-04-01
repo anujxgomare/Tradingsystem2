@@ -1,0 +1,53 @@
+# requirements.txt — BTC Quant Terminal v2
+ccxt>=4.2.0
+pandas>=2.0.0
+numpy>=1.24.0
+pandas-ta>=0.3.14b
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+websockets>=12.0
+requests>=2.31.0
+joblib>=1.3.0
+python-multipart>=0.0.9
+pydantic>=2.0.0
+
+# Optional — for LSTM support (highly recommended)
+# tensorflow>=2.13.0
+
+# ─────────────────────────────────────────────────────────────────
+# HOW TO RUN
+# ─────────────────────────────────────────────────────────────────
+#
+# 1. Install:
+#    pip install -r requirements.txt
+#
+# 2. Configure (optional):
+#    Open config/settings.py and fill in:
+#      - TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID
+#      - CRYPTOPANIC_TOKEN (free at cryptopanic.com)
+#
+# 3. Run:
+#    uvicorn server:app --reload --port 8000
+#
+# 4. Open browser:
+#    http://localhost:8000
+#
+# ─────────────────────────────────────────────────────────────────
+# API ENDPOINTS
+# ─────────────────────────────────────────────────────────────────
+# GET  /                → Dashboard UI
+# GET  /price           → Live BTC price
+# GET  /price/history   → Sparkline data (last 500 ticks)
+# GET  /predict         → ML model prediction
+# GET  /signal          → Full ensemble signal
+# GET  /sentiment       → Fear & Greed + news + Reddit
+# GET  /mtf             → Multi-timeframe analysis
+# GET  /active-trades   → Open positions
+# GET  /trades/all      → All trades (open + closed)
+# POST /trades/close    → Close a trade manually
+# GET  /dashboard       → All data in one call
+# GET  /status          → Engine health
+# WS   /ws              → Live WebSocket price feed
+# ─────────────────────────────────────────────────────────────────
