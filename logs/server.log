@@ -1629,3 +1629,331 @@ ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), 
 2026-04-02 00:37:47,983 [INFO] backend.ml.ml_engine — Training ML models...
 2026-04-02 00:37:57,938 [INFO] backend.ml.ml_engine — Training complete: {'xgb_cv_acc': 0.506, 'rf_cv_acc': 0.5494, 'lstm_acc': 0.4271, 'samples': 499, 'features': 20, 'label_dist': {2: 289, 0: 162, 1: 48}}
 2026-04-02 00:37:57,939 [INFO] backend.core.engine — Training done: {'xgb_cv_acc': 0.506, 'rf_cv_acc': 0.5494, 'lstm_acc': 0.4271, 'samples': 499, 'features': 20, 'label_dist': {2: 289, 0: 162, 1: 48}}
+2026-04-02 16:13:04,349 [WARNING] backend.ml.ml_engine — TensorFlow not available — LSTM disabled, XGB+RF ensemble used
+2026-04-02 16:13:06,686 [INFO] backend.ml.ml_engine — Loaded existing ML models
+2026-04-02 16:15:03,215 [WARNING] backend.ml.ml_engine — TensorFlow not available — LSTM disabled, XGB+RF ensemble used
+2026-04-02 16:15:05,297 [INFO] backend.ml.ml_engine — Loaded existing ML models
+2026-04-02 16:15:05,629 [INFO] backend.core.engine — Trading engine starting...
+2026-04-02 16:15:05,630 [INFO] backend.core.engine — Fetching data for training...
+2026-04-02 16:15:05,633 [INFO] backend.core.engine — All engine threads started
+2026-04-02 16:15:05,633 [INFO] server — Trading engine started on server startup
+2026-04-02 16:15:18,518 [INFO] backend.ml.ml_engine — Training ML models...
+2026-04-02 16:15:28,879 [INFO] backend.ml.ml_engine — Training complete: {'xgb_cv_acc': 0.5205, 'rf_cv_acc': 0.5639, 'lstm_acc': None, 'samples': 499, 'features': 20, 'label_dist': {2: 283, 0: 177, 1: 39}}
+2026-04-02 16:15:28,880 [INFO] backend.core.engine — Training done: {'xgb_cv_acc': 0.5205, 'rf_cv_acc': 0.5639, 'lstm_acc': None, 'samples': 499, 'features': 20, 'label_dist': {2: 283, 0: 177, 1: 39}}
+2026-04-02 16:17:27,811 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:17:32,823 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:17:37,524 [ERROR] backend.core.data_fetcher — OHLCV fetch error [1m]: binance GET https://api.binance.com/api/v3/klines?interval=1m&limit=500&symbol=BTCUSDT
+2026-04-02 16:17:37,546 [ERROR] backend.core.data_fetcher — OHLCV fetch error [3m]: binance GET https://api.binance.com/api/v3/klines?interval=3m&limit=500&symbol=BTCUSDT
+2026-04-02 16:17:37,566 [ERROR] backend.core.data_fetcher — OHLCV fetch error [5m]: binance GET https://api.binance.com/api/v3/klines?interval=5m&limit=500&symbol=BTCUSDT
+2026-04-02 16:17:37,589 [ERROR] backend.core.data_fetcher — OHLCV fetch error [15m]: binance GET https://api.binance.com/api/v3/klines?interval=15m&limit=500&symbol=BTCUSDT
+2026-04-02 16:17:37,608 [ERROR] backend.core.data_fetcher — OHLCV fetch error [30m]: binance GET https://api.binance.com/api/v3/klines?interval=30m&limit=500&symbol=BTCUSDT
+2026-04-02 16:17:37,841 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:17:38,029 [ERROR] backend.core.data_fetcher — Orderbook error: binance GET https://api.binance.com/api/v3/depth?symbol=BTCUSDT&limit=20
+2026-04-02 16:17:42,850 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:17:47,853 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:17:52,856 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:17:57,859 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:18:02,862 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:18:07,866 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:18:12,869 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:18:17,873 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:18:22,876 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:18:27,885 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:18:32,888 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:18:37,891 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:18:38,033 [ERROR] backend.core.data_fetcher — OHLCV fetch error [1m]: binance GET https://api.binance.com/api/v3/klines?interval=1m&limit=500&symbol=BTCUSDT
+2026-04-02 16:18:38,054 [ERROR] backend.core.data_fetcher — OHLCV fetch error [3m]: binance GET https://api.binance.com/api/v3/klines?interval=3m&limit=500&symbol=BTCUSDT
+2026-04-02 16:18:38,075 [ERROR] backend.core.data_fetcher — OHLCV fetch error [5m]: binance GET https://api.binance.com/api/v3/klines?interval=5m&limit=500&symbol=BTCUSDT
+2026-04-02 16:18:38,095 [ERROR] backend.core.data_fetcher — OHLCV fetch error [15m]: binance GET https://api.binance.com/api/v3/klines?interval=15m&limit=500&symbol=BTCUSDT
+2026-04-02 16:18:38,116 [ERROR] backend.core.data_fetcher — OHLCV fetch error [30m]: binance GET https://api.binance.com/api/v3/klines?interval=30m&limit=500&symbol=BTCUSDT
+2026-04-02 16:18:38,475 [ERROR] backend.core.data_fetcher — Orderbook error: binance GET https://api.binance.com/api/v3/depth?symbol=BTCUSDT&limit=20
+2026-04-02 16:18:42,894 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:18:47,897 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:18:52,901 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:18:57,909 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:19:02,912 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:19:07,915 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:19:12,919 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:19:17,923 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:19:22,926 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:19:27,935 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:19:32,938 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:19:37,941 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:19:38,480 [ERROR] backend.core.data_fetcher — OHLCV fetch error [1m]: binance GET https://api.binance.com/api/v3/klines?interval=1m&limit=500&symbol=BTCUSDT
+2026-04-02 16:19:38,500 [ERROR] backend.core.data_fetcher — OHLCV fetch error [3m]: binance GET https://api.binance.com/api/v3/klines?interval=3m&limit=500&symbol=BTCUSDT
+2026-04-02 16:19:38,521 [ERROR] backend.core.data_fetcher — OHLCV fetch error [5m]: binance GET https://api.binance.com/api/v3/klines?interval=5m&limit=500&symbol=BTCUSDT
+2026-04-02 16:19:38,540 [ERROR] backend.core.data_fetcher — OHLCV fetch error [15m]: binance GET https://api.binance.com/api/v3/klines?interval=15m&limit=500&symbol=BTCUSDT
+2026-04-02 16:19:38,561 [ERROR] backend.core.data_fetcher — OHLCV fetch error [30m]: binance GET https://api.binance.com/api/v3/klines?interval=30m&limit=500&symbol=BTCUSDT
+2026-04-02 16:19:38,989 [ERROR] backend.core.data_fetcher — Orderbook error: binance GET https://api.binance.com/api/v3/depth?symbol=BTCUSDT&limit=20
+2026-04-02 16:19:42,945 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:22:02,764 [ERROR] backend.core.data_fetcher — Live price error: binance GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+2026-04-02 16:49:09,386 [INFO] backend.ml.ml_engine — Loaded existing ML models
+2026-04-02 16:49:09,537 [INFO] backend.core.engine — Trading engine starting...
+2026-04-02 16:49:09,539 [INFO] backend.core.engine — Fetching data for training...
+2026-04-02 16:49:09,541 [INFO] backend.core.engine — All engine threads started
+2026-04-02 16:49:09,542 [INFO] server — Trading engine started on server startup
+2026-04-02 16:49:14,904 [ERROR] backend.core.indicators — Indicator error: cannot reindex on an axis with duplicate labels
+2026-04-02 16:49:15,683 [ERROR] backend.core.indicators — Indicator error: cannot reindex on an axis with duplicate labels
+2026-04-02 16:49:15,691 [ERROR] backend.core.indicators — Indicator error: cannot reindex on an axis with duplicate labels
+2026-04-02 16:49:15,739 [INFO] backend.ml.ml_engine — Training ML models...
+2026-04-02 16:49:19,911 [WARNING] tensorflow — TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-04-02 16:49:28,938 [INFO] backend.ml.ml_engine — Training complete: {'xgb_acc': 0.9147, 'rf_acc': 0.9147, 'lstm_acc': 0.9466, 'samples': 1800, 'features': 4}
+2026-04-02 16:49:28,939 [INFO] backend.core.engine — Training done: {'xgb_acc': 0.9147, 'rf_acc': 0.9147, 'lstm_acc': 0.9466, 'samples': 1800, 'features': 4}
+2026-04-02 16:49:32,132 [ERROR] backend.core.indicators — Indicator error: cannot reindex on an axis with duplicate labels
+2026-04-02 16:49:32,169 [ERROR] backend.core.indicators — Indicator error: cannot reindex on an axis with duplicate labels
+2026-04-02 16:49:32,178 [ERROR] backend.core.indicators — Indicator error: cannot reindex on an axis with duplicate labels
+2026-04-02 16:49:37,420 [ERROR] backend.core.engine — Signal loop error: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+Traceback (most recent call last):
+  File "E:\TRADING BOTS\BOT\backend\core\engine.py", line 153, in _signal_loop
+    sig = self.signal_eng.generate(
+        self._dfs_ind, mtf, ml_pred, sent, ob
+    )
+  File "E:\TRADING BOTS\BOT\backend\core\..\..\backend\core\..\..\backend\core\..\..\backend\ml\..\..\backend\core\..\..\backend\strategies\signal_engine.py", line 10, in generate
+    df = dfs.get("1m") or list(dfs.values())[0]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\TRADING BOTS\BOT\.venv\Lib\site-packages\pandas\core\generic.py", line 1513, in __bool__
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2026-04-02 16:50:40,596 [ERROR] backend.core.indicators — Indicator error: cannot reindex on an axis with duplicate labels
+2026-04-02 16:50:40,666 [ERROR] backend.core.indicators — Indicator error: cannot reindex on an axis with duplicate labels
+2026-04-02 16:50:40,680 [ERROR] backend.core.indicators — Indicator error: cannot reindex on an axis with duplicate labels
+2026-04-02 16:50:40,983 [ERROR] backend.core.engine — Signal loop error: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+Traceback (most recent call last):
+  File "E:\TRADING BOTS\BOT\backend\core\engine.py", line 153, in _signal_loop
+    sig = self.signal_eng.generate(
+        self._dfs_ind, mtf, ml_pred, sent, ob
+    )
+  File "E:\TRADING BOTS\BOT\backend\core\..\..\backend\core\..\..\backend\core\..\..\backend\ml\..\..\backend\core\..\..\backend\strategies\signal_engine.py", line 10, in generate
+    df = dfs.get("1m") or list(dfs.values())[0]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\TRADING BOTS\BOT\.venv\Lib\site-packages\pandas\core\generic.py", line 1513, in __bool__
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2026-04-02 16:51:45,451 [ERROR] backend.core.indicators — Indicator error: cannot reindex on an axis with duplicate labels
+2026-04-02 16:51:45,488 [ERROR] backend.core.indicators — Indicator error: cannot reindex on an axis with duplicate labels
+2026-04-02 16:51:45,497 [ERROR] backend.core.indicators — Indicator error: cannot reindex on an axis with duplicate labels
+2026-04-02 16:51:45,789 [ERROR] backend.core.engine — Signal loop error: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+Traceback (most recent call last):
+  File "E:\TRADING BOTS\BOT\backend\core\engine.py", line 153, in _signal_loop
+    sig = self.signal_eng.generate(
+        self._dfs_ind, mtf, ml_pred, sent, ob
+    )
+  File "E:\TRADING BOTS\BOT\backend\core\..\..\backend\core\..\..\backend\core\..\..\backend\ml\..\..\backend\core\..\..\backend\strategies\signal_engine.py", line 10, in generate
+    df = dfs.get("1m") or list(dfs.values())[0]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\TRADING BOTS\BOT\.venv\Lib\site-packages\pandas\core\generic.py", line 1513, in __bool__
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2026-04-02 16:53:40,755 [INFO] backend.ml.ml_engine — Loaded existing ML models
+2026-04-02 16:53:40,903 [INFO] backend.core.engine — Trading engine starting...
+2026-04-02 16:53:40,904 [INFO] backend.core.engine — Fetching data for training...
+2026-04-02 16:53:40,907 [INFO] backend.core.engine — All engine threads started
+2026-04-02 16:53:40,907 [INFO] server — Trading engine started on server startup
+2026-04-02 16:53:50,292 [INFO] backend.ml.ml_engine — Training ML models...
+2026-04-02 16:53:56,731 [WARNING] tensorflow — TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-04-02 16:54:03,684 [INFO] backend.ml.ml_engine — Training complete: {'xgb_acc': 0.7181, 'rf_acc': 0.7542, 'lstm_acc': 0.8112, 'samples': 1000, 'features': 20}
+2026-04-02 16:54:03,684 [INFO] backend.core.engine — Training done: {'xgb_acc': 0.7181, 'rf_acc': 0.7542, 'lstm_acc': 0.8112, 'samples': 1000, 'features': 20}
+2026-04-02 16:59:12,387 [INFO] backend.ml.ml_engine — Loaded existing ML models
+2026-04-02 16:59:12,512 [INFO] backend.core.engine — Trading engine starting...
+2026-04-02 16:59:12,513 [INFO] backend.core.engine — Fetching data for training...
+2026-04-02 16:59:12,516 [INFO] backend.core.engine — All engine threads started
+2026-04-02 16:59:12,516 [INFO] server — Trading engine started on server startup
+2026-04-02 17:02:47,770 [INFO] backend.ml.ml_engine — Loaded existing ML models
+2026-04-02 17:02:47,916 [INFO] backend.core.engine — Trading engine starting...
+2026-04-02 17:02:47,918 [INFO] backend.core.engine — Fetching data for training...
+2026-04-02 17:02:47,920 [INFO] backend.core.engine — All engine threads started
+2026-04-02 17:02:47,921 [INFO] server — Trading engine started on server startup
+2026-04-02 17:02:54,913 [INFO] backend.ml.ml_engine — Training ML models...
+2026-04-02 17:02:58,130 [WARNING] tensorflow — TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-04-02 17:03:02,355 [INFO] backend.core.engine — Training done: {'samples': 1000, 'features': 20}
+2026-04-02 17:13:16,208 [INFO] backend.ml.ml_engine — Loaded existing ML models
+2026-04-02 17:13:16,344 [INFO] backend.core.engine — Trading engine starting...
+2026-04-02 17:13:16,345 [INFO] backend.core.engine — Fetching data for training...
+2026-04-02 17:13:16,349 [INFO] backend.core.engine — All engine threads started
+2026-04-02 17:13:16,349 [INFO] server — Trading engine started on server startup
+2026-04-02 17:13:23,680 [INFO] backend.ml.ml_engine — Training ML models...
+2026-04-02 17:13:28,551 [WARNING] tensorflow — TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-04-02 17:13:35,770 [INFO] backend.core.engine — Training done: {'samples': 1000, 'features': 20}
+2026-04-02 17:13:51,741 [ERROR] backend.core.engine — Signal loop error: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "E:\TRADING BOTS\BOT\backend\core\engine.py", line 163, in _signal_loop
+    new_trade = self.trades.open_trade(sig, self.notifier)
+TypeError: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+2026-04-02 17:14:56,065 [ERROR] backend.core.engine — Signal loop error: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "E:\TRADING BOTS\BOT\backend\core\engine.py", line 163, in _signal_loop
+    new_trade = self.trades.open_trade(sig, self.notifier)
+TypeError: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+2026-04-02 17:16:01,257 [ERROR] backend.core.engine — Signal loop error: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "E:\TRADING BOTS\BOT\backend\core\engine.py", line 163, in _signal_loop
+    new_trade = self.trades.open_trade(sig, self.notifier)
+TypeError: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+2026-04-02 17:17:07,057 [ERROR] backend.core.engine — Signal loop error: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "E:\TRADING BOTS\BOT\backend\core\engine.py", line 163, in _signal_loop
+    new_trade = self.trades.open_trade(sig, self.notifier)
+TypeError: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+2026-04-02 17:18:11,552 [ERROR] backend.core.engine — Signal loop error: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "E:\TRADING BOTS\BOT\backend\core\engine.py", line 163, in _signal_loop
+    new_trade = self.trades.open_trade(sig, self.notifier)
+TypeError: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+2026-04-02 17:19:20,325 [ERROR] backend.core.engine — Signal loop error: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "E:\TRADING BOTS\BOT\backend\core\engine.py", line 163, in _signal_loop
+    new_trade = self.trades.open_trade(sig, self.notifier)
+TypeError: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+2026-04-02 17:19:48,252 [INFO] backend.ml.ml_engine — Loaded existing ML models
+2026-04-02 17:19:48,394 [INFO] backend.core.engine — Trading engine starting...
+2026-04-02 17:19:48,396 [INFO] backend.core.engine — Fetching data for training...
+2026-04-02 17:19:48,399 [INFO] backend.core.engine — All engine threads started
+2026-04-02 17:19:48,399 [INFO] server — Trading engine started on server startup
+2026-04-02 17:19:55,907 [INFO] backend.ml.ml_engine — Training ML models...
+2026-04-02 17:19:58,820 [WARNING] tensorflow — TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-04-02 17:20:03,020 [INFO] backend.core.engine — Training done: {'samples': 1000, 'features': 20}
+2026-04-02 17:20:11,557 [ERROR] backend.core.engine — Signal loop error: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "E:\TRADING BOTS\BOT\backend\core\engine.py", line 163, in _signal_loop
+    new_trade = self.trades.open_trade(sig, self.notifier)
+TypeError: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+2026-04-02 17:21:19,024 [ERROR] backend.core.engine — Signal loop error: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "E:\TRADING BOTS\BOT\backend\core\engine.py", line 163, in _signal_loop
+    new_trade = self.trades.open_trade(sig, self.notifier)
+TypeError: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+2026-04-02 17:22:23,490 [ERROR] backend.core.engine — Signal loop error: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "E:\TRADING BOTS\BOT\backend\core\engine.py", line 163, in _signal_loop
+    new_trade = self.trades.open_trade(sig, self.notifier)
+TypeError: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+2026-04-02 17:23:27,627 [ERROR] backend.core.engine — Signal loop error: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "E:\TRADING BOTS\BOT\backend\core\engine.py", line 163, in _signal_loop
+    new_trade = self.trades.open_trade(sig, self.notifier)
+TypeError: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+2026-04-02 17:24:31,481 [ERROR] backend.core.engine — Signal loop error: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "E:\TRADING BOTS\BOT\backend\core\engine.py", line 163, in _signal_loop
+    new_trade = self.trades.open_trade(sig, self.notifier)
+TypeError: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+2026-04-02 17:26:46,017 [ERROR] backend.core.engine — Signal loop error: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "E:\TRADING BOTS\BOT\backend\core\engine.py", line 163, in _signal_loop
+    new_trade = self.trades.open_trade(sig, self.notifier)
+TypeError: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+2026-04-02 17:27:51,950 [ERROR] backend.core.engine — Signal loop error: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "E:\TRADING BOTS\BOT\backend\core\engine.py", line 163, in _signal_loop
+    new_trade = self.trades.open_trade(sig, self.notifier)
+TypeError: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+2026-04-02 17:28:56,339 [ERROR] backend.core.engine — Signal loop error: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "E:\TRADING BOTS\BOT\backend\core\engine.py", line 163, in _signal_loop
+    new_trade = self.trades.open_trade(sig, self.notifier)
+TypeError: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+2026-04-02 17:31:10,294 [ERROR] backend.core.engine — Signal loop error: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "E:\TRADING BOTS\BOT\backend\core\engine.py", line 163, in _signal_loop
+    new_trade = self.trades.open_trade(sig, self.notifier)
+TypeError: TradeManager.open_trade() takes 2 positional arguments but 3 were given
+2026-04-02 17:32:31,790 [INFO] backend.ml.ml_engine — Loaded existing ML models
+2026-04-02 17:32:31,906 [INFO] backend.core.engine — Trading engine starting...
+2026-04-02 17:32:31,907 [INFO] backend.core.engine — Fetching data for training...
+2026-04-02 17:32:31,909 [INFO] backend.core.engine — All engine threads started
+2026-04-02 17:32:31,909 [INFO] server — Trading engine started on server startup
+2026-04-02 17:32:53,040 [INFO] backend.ml.ml_engine — Training ML models...
+2026-04-02 17:32:58,377 [WARNING] tensorflow — TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-04-02 17:33:09,549 [INFO] backend.core.engine — Training done: {'samples': 1000, 'features': 20}
+2026-04-02 17:33:24,089 [ERROR] backend.core.engine — Signal loop error: 'breakeven'
+Traceback (most recent call last):
+  File "E:\TRADING BOTS\BOT\backend\core\engine.py", line 163, in _signal_loop
+    new_trade = self.trades.open_trade(sig)
+  File "E:\TRADING BOTS\BOT\backend\core\..\..\backend\core\..\..\backend\core\..\..\backend\ml\..\..\backend\core\..\..\backend\core\trade_manager.py", line 143, in open_trade
+    trade = Trade(signal)
+  File "E:\TRADING BOTS\BOT\backend\core\..\..\backend\core\..\..\backend\core\..\..\backend\ml\..\..\backend\core\..\..\backend\core\trade_manager.py", line 99, in __init__
+    self.breakeven = signal["breakeven"]
+                     ~~~~~~^^^^^^^^^^^^^
+KeyError: 'breakeven'
+2026-04-02 17:34:50,580 [INFO] backend.ml.ml_engine — Loaded existing ML models
+2026-04-02 17:34:50,701 [INFO] backend.core.engine — Trading engine starting...
+2026-04-02 17:34:50,701 [INFO] backend.core.engine — Fetching data for training...
+2026-04-02 17:34:50,704 [INFO] backend.core.engine — All engine threads started
+2026-04-02 17:34:50,704 [INFO] server — Trading engine started on server startup
+2026-04-02 17:35:01,040 [INFO] backend.ml.ml_engine — Training ML models...
+2026-04-02 17:35:04,022 [WARNING] tensorflow — TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-04-02 17:35:08,816 [INFO] backend.core.engine — Training done: {'samples': 1000, 'features': 20}
+2026-04-02 17:37:44,888 [INFO] backend.ml.ml_engine — Loaded existing ML models
+2026-04-02 17:37:45,081 [INFO] backend.core.engine — Trading engine starting...
+2026-04-02 17:37:45,082 [INFO] backend.core.engine — Fetching data for training...
+2026-04-02 17:37:45,087 [INFO] backend.core.engine — All engine threads started
+2026-04-02 17:37:45,087 [INFO] server — Trading engine started on server startup
+2026-04-02 17:46:27,472 [INFO] backend.ml.ml_engine — Loaded existing ML models
+2026-04-02 17:46:27,641 [INFO] backend.core.engine — Trading engine starting...
+2026-04-02 17:46:27,642 [INFO] backend.core.engine — Fetching data for training...
+2026-04-02 17:46:27,644 [INFO] backend.core.engine — All engine threads started
+2026-04-02 17:46:27,644 [INFO] server — Trading engine started on server startup
+2026-04-02 17:46:35,362 [INFO] backend.ml.ml_engine — Training ML models...
+2026-04-02 17:46:38,487 [WARNING] tensorflow — TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-04-02 17:46:43,035 [INFO] backend.core.engine — Training done: {'samples': 1000, 'features': 20}
+2026-04-02 18:03:17,235 [INFO] backend.ml.ml_engine — Loaded existing ML models
+2026-04-02 18:03:17,386 [INFO] backend.core.engine — Trading engine starting...
+2026-04-02 18:03:17,387 [INFO] backend.core.engine — Fetching data for training...
+2026-04-02 18:03:17,391 [INFO] backend.core.engine — All engine threads started
+2026-04-02 18:03:17,391 [INFO] server — Trading engine started on server startup
+2026-04-02 18:03:30,450 [INFO] backend.ml.ml_engine — Training ML models...
+2026-04-02 18:03:33,367 [WARNING] tensorflow — TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-04-02 18:03:37,485 [INFO] backend.core.engine — Training done: {'samples': 1000, 'features': 20}
+2026-04-02 18:15:11,505 [ERROR] backend.core.engine — Signal loop error: 'breakeven'
+Traceback (most recent call last):
+  File "E:\TRADING BOTS\BOT\backend\core\engine.py", line 162, in _signal_loop
+    new_trade = self.trades.open_trade(sig)
+  File "E:\TRADING BOTS\BOT\backend\core\..\..\backend\core\..\..\backend\core\..\..\backend\ml\..\..\backend\core\..\..\backend\core\trade_manager.py", line 161, in open_trade
+    trade = Trade(signal)
+  File "E:\TRADING BOTS\BOT\backend\core\..\..\backend\core\..\..\backend\core\..\..\backend\ml\..\..\backend\core\..\..\backend\core\trade_manager.py", line 101, in __init__
+    self.breakeven = signal["breakeven"]
+                     ~~~~~~^^^^^^^^^^^^^
+KeyError: 'breakeven'
+2026-04-02 18:16:16,101 [ERROR] backend.core.engine — Signal loop error: 'breakeven'
+Traceback (most recent call last):
+  File "E:\TRADING BOTS\BOT\backend\core\engine.py", line 162, in _signal_loop
+    new_trade = self.trades.open_trade(sig)
+  File "E:\TRADING BOTS\BOT\backend\core\..\..\backend\core\..\..\backend\core\..\..\backend\ml\..\..\backend\core\..\..\backend\core\trade_manager.py", line 161, in open_trade
+    trade = Trade(signal)
+  File "E:\TRADING BOTS\BOT\backend\core\..\..\backend\core\..\..\backend\core\..\..\backend\ml\..\..\backend\core\..\..\backend\core\trade_manager.py", line 101, in __init__
+    self.breakeven = signal["breakeven"]
+                     ~~~~~~^^^^^^^^^^^^^
+KeyError: 'breakeven'
+2026-04-02 18:27:45,091 [INFO] backend.ml.ml_engine — Loaded existing ML models
+2026-04-02 18:27:45,295 [INFO] backend.core.engine — Trading engine starting...
+2026-04-02 18:27:45,297 [INFO] backend.core.engine — Fetching data for training...
+2026-04-02 18:27:45,301 [INFO] backend.core.engine — All engine threads started
+2026-04-02 18:27:45,301 [INFO] server — Trading engine started on server startup
+2026-04-02 18:27:54,581 [INFO] backend.ml.ml_engine — Training ML models...
+2026-04-02 18:27:59,145 [WARNING] tensorflow — TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-04-02 18:28:03,821 [INFO] backend.core.engine — Training done: {'samples': 1000, 'features': 20}
+2026-04-02 18:28:15,115 [INFO] backend.core.trade_manager — Trade OPENED: SHORT @ 66068.2
+2026-04-02 18:28:15,116 [INFO] backend.core.engine — Auto-opened trade: SHORT
+2026-04-02 18:29:20,508 [INFO] backend.core.trade_manager — Trade OPENED: SHORT @ 66048.3
+2026-04-02 18:29:20,508 [INFO] backend.core.engine — Auto-opened trade: SHORT
+2026-04-02 18:31:32,163 [INFO] backend.core.trade_manager — Trade CLOSED: f827594b | LOSS | -0.09%
+2026-04-02 18:31:32,628 [INFO] backend.core.trade_manager — Trade OPENED: SHORT @ 66095.9
+2026-04-02 18:31:32,628 [INFO] backend.core.engine — Auto-opened trade: SHORT
+2026-04-02 18:32:53,749 [INFO] backend.core.trade_manager — Trade CLOSED: 61d41658 | WIN | 0.17%
+2026-04-02 18:33:48,711 [INFO] backend.core.trade_manager — Trade OPENED: SHORT @ 66000.6
+2026-04-02 18:33:48,711 [INFO] backend.core.engine — Auto-opened trade: SHORT
+2026-04-02 18:35:57,733 [INFO] backend.core.trade_manager — Trade CLOSED: c9c156a4 | LOSS | -0.11%
+2026-04-02 18:35:59,406 [INFO] backend.core.trade_manager — Trade OPENED: SHORT @ 66074.7
+2026-04-02 18:35:59,406 [INFO] backend.core.engine — Auto-opened trade: SHORT
+2026-04-02 18:36:28,330 [INFO] backend.core.trade_manager — Trade CLOSED: 37aff3ef | LOSS | -0.09%
+2026-04-02 18:36:33,430 [INFO] backend.core.trade_manager — Trade CLOSED: 1780a608 | LOSS | -0.12%
+2026-04-02 18:37:04,958 [INFO] backend.core.trade_manager — Trade OPENED: SHORT @ 66126.4
+2026-04-02 18:37:04,959 [INFO] backend.core.engine — Auto-opened trade: SHORT
+2026-04-02 18:38:10,619 [INFO] backend.core.trade_manager — Trade OPENED: SHORT @ 66086.6
+2026-04-02 18:38:10,619 [INFO] backend.core.engine — Auto-opened trade: SHORT

@@ -175,9 +175,27 @@ def get_all_trades():
     tm = get_trade_manager()
     return {"trades": [t.to_dict() for t in tm.all_trades()]}
 
+@app.get("/trades/db")
+def get_db_trades():
+    from backend.db.db import get_connection
+
+    conn = get_connection()
+    cursor = conn.cursor(dictionary=True)
+
+    cursor.execute("SELECT * FROM trades ORDER BY open_time DESC")
+    rows = cursor.fetchall()
+
+    conn.close()
+    return {"trades": rows}
+
 class CloseBody(BaseModel):
     trade_id : str
     price    : Optional[float] = None
+
+@app.get("/trades/closed")
+def get_closed_trades():
+    tm = get_trade_manager()
+    return [t.to_dict() for t in tm.all_trades() if t.status == "CLOSED"]
 
 @app.post("/trades/close")
 def close_trade(body: CloseBody):

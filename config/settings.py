@@ -50,11 +50,11 @@ TRAIL_STEP_PCT   = 0.005      # 0.5% trail step
 
 # ── Strategy Weights (ensemble) ───────────────────────────────────────────────
 WEIGHTS = {
-    "trend"      : 0.15,
-    "momentum"   : 0.20,
-    "structure"  : 0.15,
-    "ml"         : 0.55,
-    "sentiment"  : 0.05,
+    "trend": 0.10,
+    "momentum": 0.10,
+    "structure": 0.20,
+    "ml": 0.55,
+    "sentiment": 0.05,
 }
 
 # ── ML ────────────────────────────────────────────────────────────────────────

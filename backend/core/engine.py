@@ -153,16 +153,33 @@ class TradingEngine:
                 sig = self.signal_eng.generate(
                     self._dfs_ind, mtf, ml_pred, sent, ob
                 )
-                self.state["signal"]      = sig
-                self.state["last_signal"] = datetime.utcnow().isoformat()
-
+                
                 # Auto-open trade if signal is strong enough
                 if (sig.get("direction") != "FLAT" and
                         sig.get("confidence", 0) >= SIGNAL_CONFIDENCE_MIN and
                         sig.get("entry") is not None):
-                    new_trade = self.trades.open_trade(sig, self.notifier)
+
+                    new_trade = self.trades.open_trade(sig)
+
                     if new_trade:
                         logger.info(f"Auto-opened trade: {new_trade.direction}")
+
+                        # 🔥 SEND TELEGRAM ALERT
+                        msg = f"""
+                🟢 NEW {sig['direction']} SIGNAL
+                ━━━━━━━━━━━━━━━━━━━
+                📍 Entry:      ${sig['entry']:.2f}
+                🛑 Stop Loss:  ${sig['stop_loss']:.2f}
+                🎯 Take Profit:${sig['take_profit']:.2f}
+                🔒 Breakeven:  ${sig['breakeven']:.2f}
+                ⚖️ R:R Ratio:  1:{sig['risk_reward']}
+                📊 Confidence: {sig['confidence']:.1f}%
+                💰 Risk:       ${risk_usd:.2f}
+                📦 Size:       {position_size:.5f} BTC
+                ⏰ Time:       {datetime.utcnow().strftime("%H:%M UTC")}
+                """
+
+                        self.notifier.send(msg)
 
             except Exception as e:
                 logger.error(f"Signal loop error: {e}", exc_info=True)

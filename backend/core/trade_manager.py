@@ -24,9 +24,10 @@ def save_trade_open(trade):
         id, symbol, timeframe, direction, status,
         entry_price, stop_loss, take_profit, breakeven,
         atr, risk_reward, confidence,
+        ml_prediction,
         open_time
     )
-    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
     """
 
     values = (
@@ -42,6 +43,7 @@ def save_trade_open(trade):
         trade.atr,
         trade.risk_reward,
         trade.confidence,
+        trade.prediction,   # 🔥 ML prediction stored
         trade.open_time
     )
 
@@ -96,11 +98,11 @@ class Trade:
         self.entry = signal["entry"]
         self.stop_loss = signal["stop_loss"]
         self.take_profit = signal["take_profit"]
-        self.breakeven = signal["breakeven"]
-
+        self.breakeven = signal.get("breakeven", self.entry)
+        
         # Metrics
         self.risk_reward = signal.get("risk_reward", 0)
-        self.atr = signal.get("atr", 0)
+        self.atr = signal.get("atr", abs(self.entry - self.stop_loss))
         self.confidence = signal.get("confidence", 0)
 
         # ML Prediction (IMPORTANT)
@@ -121,7 +123,23 @@ class Trade:
         self.result = None
 
     def to_dict(self):
-        return self.__dict__
+        return {
+        "id": self.id,
+        "symbol": self.symbol,
+        "timeframe": self.timeframe,
+        "direction": self.direction,
+        "entry": self.entry,
+        "stop_loss": self.stop_loss,
+        "take_profit": self.take_profit,
+        "status": self.status,
+        "confidence": self.confidence,
+        "risk_reward": self.risk_reward,
+        "ml_prediction": self.prediction,
+        "open_time": str(self.open_time),
+        "close_time": str(self.close_time) if self.close_time else None,
+        "result": self.result,
+        "pnl_pct": self.pnl_pct,
+    }
 
 
 # =============================================================================
@@ -140,11 +158,13 @@ class TradeManager:
         if signal.get("direction") == "FLAT":
             return None
 
-        trade = Trade(signal)
+        # ✅ LIMIT CHECK FIRST
+        if len(self.active_trades()) >= 2:
+            return None
 
+        trade = Trade(signal)
         self._trades.append(trade)
 
-        # ✅ SAVE TO DB
         save_trade_open(trade)
 
         logger.info(f"Trade OPENED: {trade.direction} @ {trade.entry}")
